@@ -16,6 +16,7 @@ function initialize() { // adds a "click" action to each image of the table
     button.addEventListener('click', function() {
         reset();
     });
+    randomize();
 }
 
 function change(num) {
@@ -65,8 +66,18 @@ function reset() {
     count = 0;
     score = 0;
     document.getElementById("score").innerHTML = "Score: " + score;
+    randomize();
 }
 
 function randomize() {
-    
+    imgs = ["bokkari.png", "jiniret.png", "Dwaekki.png", "Foxl.ny.png", "Han.png", "Leebit.png", "PuppyM.png", "WolfChan.png"]
+    imgcount = [0, 0, 0, 0, 0, 0, 0, 0]
+    for (var i = 0; i < spans.length; i ++) {
+        num = Math.floor(Math.random() * 8);
+        while (imgcount[num] > 1) {
+            num = Math.floor(Math.random() * 8);
+        }   
+        spans[i].setAttribute("backup", imgs[num]);
+        imgcount[num]++;
+    }
 }

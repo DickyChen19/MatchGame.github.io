@@ -2,19 +2,20 @@ body {
     background-color: rgb(193, 202, 222);
 }
 
+
 .score {
-    font-family: "Lucida Console", 	"Courier New", monospace;
-    color: rgb(118, 120, 230); 
+    font-family: "Lucida Console",  "Courier New", monospace;
+    color: rgb(118, 120, 230);
     margin-top: 30px;
     align-content: center;
     justify-content: center;
     display: flex;
-    font: 60px; 
+    font: 60px;
 }
 button {
     margin-top: -12px;
-    margin-left: 10px; 
-    font-family: "Lucida Console", 	"Courier New", monospace;
+    margin-left: 10px;
+    font-family: "Lucida Console",  "Courier New", monospace;
     letter-spacing: 1px;
     font-weight: bold;
     font-size: 20px;
@@ -27,24 +28,72 @@ button {
     cursor: pointer;
 }
 
+
 .container {
     align-content: center;
     justify-content: center;
-    margin: auto;
-    display: grid; 
+    margin-top: 35px;
+    display: grid;
     grid-template-columns: repeat(4, 0.08fr);
     grid-template-rows: repeat(4, 0.1fr);
     row-gap: 20px;
     column-gap: 10px;
-    
+   
 }
+
 
 .container > img {
     text-align: center;
     background-color: azure;
     font-size: 30pt;
-    border: 2px solid black;
+    border: 2px solid rgb(136, 136, 136);
     border-radius: 10px;
-    height: 20vh; 
+    height: 20vh;
 }
 
+
+/* Styles for Mobile Viewport (max-width: 600px) */
+@media (max-width: 600px) {
+    .container {
+        align-content: center;
+        justify-content: center;
+        margin-top: 138px;
+        display: grid;
+        grid-template-columns: repeat(4, 0.08fr);
+        grid-template-rows: repeat(4, 0.1fr);
+        row-gap: 20px;
+        column-gap: 10px;
+    }
+    .container > img {
+        text-align: center;
+        background-color: azure;
+        font-size: 30pt;
+        border: 2px solid rgb(136, 136, 136);
+        border-radius: 10px;
+        height: 14vh;
+    }
+}
+
+
+@media (min-width: 601px) and (max-width: 1024px) {
+    .container {
+        align-content: center;
+        justify-content: center;
+        margin-top: 108px;
+        display: grid;
+        grid-template-columns: repeat(4, 0.08fr);
+        grid-template-rows: repeat(4, 0.1fr);
+        row-gap: 20px;
+        column-gap: 10px;
+    }
+
+
+    .container > img {
+        text-align: center;
+        background-color: azure;
+        font-size: 30pt;
+        border: 2px solid rgb(136, 136, 136);
+        border-radius: 10px;
+        height: 17vh;
+    }
+}
